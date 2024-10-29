@@ -1,0 +1,11 @@
+services:
+  vlmcsd:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: vlmcsd
+    ports:
+      - "1688:1688"
+    restart: always
+    volumes:
+      - /var/log/vlmcsd:/var/log
